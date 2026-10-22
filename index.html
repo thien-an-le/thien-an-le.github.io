@@ -3,582 +3,380 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thien An (Michael) Le</title>
-<meta name="description" content="Thien An (Michael) Le, Ph.D. Catalysis scientist in Houston, TX: heterogeneous catalysis, hydrogen production and ammonia cracking, catalyst scale-up and technology transfer. U.S. Permanent Resident.">
+<title>Thien An Le, catalysis scientist</title>
+<meta name="description" content="Thien An (Michael) Le, Ph.D. Catalysis scientist in Houston. Ammonia-cracking and methanation catalysts, two licensed to industry (Lotte Chemical, CES). U.S. permanent resident.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
-/* Layout: single reading column (max 1040px) with a sticky section nav; hero pairs the pitch with a reaction card; data blocks use 2–3 column grids that stack on phones. */
 :root{
-  --bg:#f7f8f8;
-  --surface:#ffffff;
-  --ink:#14211f;
-  --muted:#55625f;
-  --line:#dde3e1;
-  --accent:#0d6b63;      /* ruthenium-on-ceria teal */
-  --accent-soft:#e3f0ee;
-  --warm:#9a5b12;        /* used only for the H2 output figure */
-  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --f-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
-  --s-1:.8125rem; --s0:1rem; --s1:1.125rem; --s2:1.375rem; --s3:1.75rem; --s4:2.5rem; --s5:3.25rem;
+  --paper:#fbfaf7;
+  --ink:#1c201f;
+  --soft:#5a605d;
+  --rule:#e2dfd8;
+  --teal:#0b5d55;
+  --rust:#8a4b0f;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0f1716; --surface:#16211f; --ink:#e6eeec; --muted:#9fb0ac; --line:#26332f;
-    --accent:#4fc2b5; --accent-soft:#17312d; --warm:#e4a95a; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0f1716; --surface:#16211f; --ink:#e6eeec; --muted:#9fb0ac; --line:#26332f;
-  --accent:#4fc2b5; --accent-soft:#17312d; --warm:#e4a95a; color-scheme:dark;
+  :root{--paper:#141716;--ink:#e8e6e1;--soft:#a5aaa6;--rule:#2c302e;--teal:#5cc0b3;--rust:#e0a45c;color-scheme:dark}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--s0);line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.15;margin:0}
-p{margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.mono{font-family:var(--f-mono)}
-.eyebrow{font-family:var(--f-mono);font-size:var(--s-1);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans)}
+img{max-width:100%;display:block}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:650;line-height:1.2;margin:0}
+p{margin:0 0 1em}
+.page{max-width:1000px;margin:0 auto;padding:0 16px}
 
-/* nav */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.brand{font-family:var(--f-display);font-weight:700;font-size:var(--s1);color:var(--ink);text-decoration:none;white-space:nowrap}
-.brand span{color:var(--accent)}
-nav ul{display:flex;gap:4px 18px;list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
-nav a{color:var(--muted);text-decoration:none;font-size:.9375rem}
-nav a:hover{color:var(--ink)}
-@media (max-width:640px){nav .opt{display:none}}
+/* top bar */
+.bar{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.bar strong{font-family:var(--serif);font-size:1.05rem}
+.bar nav{display:flex;gap:18px;flex-wrap:wrap}
+.bar nav a{color:var(--soft);text-decoration:none}
+.bar nav a:hover{color:var(--ink)}
+@media (max-width:600px){.bar nav .wide{display:none}}
 
-/* hero */
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;padding-block:56px 40px;align-items:center}
-@media (max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:28px;padding-block:36px 28px}}
-.hero h1{font-size:clamp(2.2rem,5.5vw,var(--s5));font-weight:700;letter-spacing:-.01em}
-.ident{display:flex;gap:24px;align-items:center}
-.ident > div{min-width:0}
-.portrait{flex:none;width:148px;height:185px;max-width:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
-@media (max-width:520px){.ident{gap:16px}.portrait{width:96px;height:120px;border-radius:10px}}
-.hero h1 .alias{color:var(--muted);font-weight:500}
-.role{margin-top:12px;font-size:var(--s2);font-family:var(--f-display);font-weight:500;color:var(--accent)}
-.focus{margin-top:14px;color:var(--muted);max-width:60ch}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.chip{font-family:var(--f-mono);font-size:var(--s-1);padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink)}
-.chip.key{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:.9375rem;text-decoration:none;border:1px solid var(--accent);cursor:pointer;font-family:var(--f-body)}
-.btn.primary{background:var(--accent);color:var(--surface)}
-.btn.ghost{background:transparent;color:var(--accent)}
+/* intro */
+.intro{display:grid;grid-template-columns:170px minmax(0,1fr);gap:36px;padding:56px 0 40px}
+.intro img{width:170px;height:212px;object-fit:cover;border-radius:3px;filter:saturate(.9)}
+.intro h1{font-size:clamp(2.1rem,5vw,3rem)}
+.intro .aka{color:var(--soft);margin:.2em 0 1.2em}
+.intro .lede{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.45;max-width:34em}
+.intro .status{color:var(--soft);font-size:.95rem;max-width:40em}
+.intro .go{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:22px}
+.btn{display:inline-block;background:var(--teal);color:var(--paper);padding:10px 18px;border-radius:4px;text-decoration:none;font-weight:600}
+.btn:hover{filter:brightness(1.1)}
+@media (max-width:640px){.intro{grid-template-columns:1fr;gap:20px;padding:32px 0 28px}.intro img{width:120px;height:150px}}
 
-.reaction{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
-.reaction .eq{font-family:var(--f-mono);font-size:clamp(1.05rem,2.6vw,1.3rem);margin-top:10px;color:var(--ink);white-space:nowrap;overflow-x:auto}
-.reaction .eq b{color:var(--accent);font-weight:500}
-.reaction dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:16px 0 0;font-size:.9375rem}
-.reaction dt{color:var(--muted);font-family:var(--f-mono);font-size:var(--s-1);padding-top:2px}
-.reaction dd{margin:0}
-.reaction .big{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
-.reaction .big strong{display:block;font-family:var(--f-display);font-size:var(--s4);color:var(--warm);line-height:1;font-variant-numeric:tabular-nums}
-.reaction .big span{font-family:var(--f-mono);font-size:var(--s-1);color:var(--muted)}
-.reaction .src{margin-top:12px;font-size:var(--s-1);color:var(--muted)}
+/* result figure */
+.result{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:20px 0 22px;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:8px 36px;align-items:end}
+.result .num{font-family:var(--serif);font-size:clamp(2.6rem,7vw,3.6rem);line-height:1;color:var(--rust)}
+.result .unit{font-family:var(--mono);font-size:.85rem;color:var(--soft);margin-top:6px}
+.result p{margin:0;max-width:36em}
+.result .label{grid-column:1/-1;font-family:var(--mono);font-size:.8rem;color:var(--soft);margin-bottom:6px}
+@media (max-width:640px){.result{grid-template-columns:1fr}}
 
-/* sections */
-section{scroll-margin-top:72px}
-.sec{padding-block:44px;border-top:1px solid var(--line)}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-.sec-head h2{font-size:var(--s3);font-weight:700}
-.prose{display:grid;gap:14px;max-width:68ch}
-.prose strong{font-weight:600}
+.numbers{display:flex;flex-wrap:wrap;gap:6px 28px;padding:16px 0 0;margin:0;list-style:none;font-size:.95rem;color:var(--soft)}
+.numbers b{color:var(--ink);font-weight:600}
 
-/* glance */
-.glance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-@media (max-width:820px){.glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:460px){.glance{grid-template-columns:1fr}}
-.glance div{background:var(--surface);padding:18px 18px 20px;min-width:0}
-.glance strong{display:block;font-family:var(--f-display);font-size:var(--s3);font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
-.glance p{color:var(--muted);font-size:.9375rem;margin-top:4px}
+/* sections: heading sits in a left gutter on wide screens */
+section{display:grid;grid-template-columns:170px minmax(0,1fr);gap:36px;padding:44px 0;border-top:1px solid var(--rule);scroll-margin-top:12px}
+section > h2{font-size:1.35rem;padding-top:2px}
+@media (max-width:640px){section{grid-template-columns:1fr;gap:14px;padding:32px 0}}
+.prose{max-width:40em}
 
-/* principles */
-.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-@media (max-width:820px){.principles{grid-template-columns:1fr;gap:20px}}
-.principles h3{font-size:var(--s1);font-weight:700;margin-bottom:6px}
-.principles p{color:var(--muted)}
+.project{padding-bottom:22px;margin-bottom:22px;border-bottom:1px dashed var(--rule)}
+.project:last-child{border:0;margin:0;padding:0}
+.project h3{font-size:1.15rem}
+.project .where{font-family:var(--mono);font-size:.8rem;color:var(--soft);margin:.25em 0 .7em}
+.project ul{margin:0;padding-left:1.1em}
+.project li{margin-bottom:.3em}
+.project.minor h3{font-size:1rem}
 
-/* research areas */
-.areas{display:grid;gap:14px}
-.area{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
-@media (max-width:700px){.area{grid-template-columns:1fr;gap:8px}}
-.area .when{font-family:var(--f-mono);font-size:var(--s-1);color:var(--muted)}
-.area h3{font-size:var(--s1);margin-bottom:6px}
-.area ul{margin:8px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:4px}
-.area .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.area .tags span{font-family:var(--f-mono);font-size:.75rem;padding:3px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.pubs{list-style:none;margin:0;padding:0}
+.pubs li{padding:12px 0;border-bottom:1px solid var(--rule)}
+.pubs li:last-child{border:0}
+.pubs a{color:var(--ink);text-decoration:none;font-weight:600}
+.pubs a:hover{color:var(--teal);text-decoration:underline}
+.pubs .src{display:block;font-size:.9rem;color:var(--soft)}
+.pubs .me{color:var(--teal);font-weight:600}
+.pubs .yr{border:0;padding:18px 0 0;font-family:var(--serif);font-weight:650;color:var(--teal)}
+details{margin-top:16px}
+summary{cursor:pointer;font-weight:600;color:var(--teal)}
+details ul{margin-top:8px}
+.talks li{padding:6px 0;border:0}
+.talks .src{display:inline}
 
-/* experience timeline */
-.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.timeline li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
-.timeline li:last-child{border-bottom:0}
-@media (max-width:600px){.timeline li{grid-template-columns:1fr;gap:4px}}
-.timeline .date{font-family:var(--f-mono);font-size:var(--s-1);color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
-.timeline h3{font-size:var(--s1);font-family:var(--f-body);font-weight:600}
-.timeline .org{color:var(--muted)}
-.timeline p.note{margin-top:4px;color:var(--muted);font-size:.9375rem}
+.patent{margin-bottom:18px}
+.patent:last-child{margin:0}
+.patent .id{font-family:var(--mono);font-size:.9rem}
+.patent .state{font-size:.85rem;color:var(--soft);margin-left:6px}
+.patent h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin:.2em 0}
+.patent p{color:var(--soft);font-size:.95rem;margin:0}
 
-/* news */
-.news{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.news li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px}
-.news .date{font-family:var(--f-mono);font-size:var(--s-1);color:var(--accent);padding-top:3px}
+.cv{list-style:none;margin:0;padding:0}
+.cv li{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:16px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.cv li:last-child{border:0}
+.cv .when{font-family:var(--mono);font-size:.82rem;color:var(--soft);padding-top:3px}
+.cv p{margin:0}
+.cv .sub{color:var(--soft);font-size:.95rem}
+@media (max-width:520px){.cv li{grid-template-columns:1fr;gap:2px}}
 
-/* publications */
-.pubs{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:pub 22}
-.pubs li{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--line);counter-increment:pub -1}
-.pubs li::before{content:"[" counter(pub) "]";font-family:var(--f-mono);font-size:var(--s-1);color:var(--muted);padding-top:3px}
-.pubs .t{font-weight:500}
-.pubs .t a{color:var(--ink);text-decoration:none}
-.pubs .t a:hover{color:var(--accent);text-decoration:underline}
-.pubs .meta{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:6px;align-items:center;font-size:.875rem;color:var(--muted)}
-.badge{font-family:var(--f-mono);font-size:.75rem;padding:2px 7px;border-radius:5px;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
-.badge.first{border-color:var(--accent);color:var(--accent)}
-.yr{font-family:var(--f-display);font-size:var(--s1);font-weight:700;padding:18px 0 4px;color:var(--accent);list-style:none}
-.yr::before{content:none!important}
-.pubs li.yr{display:block;border-bottom:0;counter-increment:none}
-.pubs .authors{margin-top:4px;font-size:.875rem;color:var(--muted)}
-.pubs .authors em{font-style:normal;font-weight:600;color:var(--ink)}
-.legend{font-size:.875rem;color:var(--muted)}
-details.more{margin-top:18px}
-details.more summary{cursor:pointer;font-weight:600;color:var(--accent);list-style:none;display:inline-flex;gap:8px;align-items:center}
-details.more summary::-webkit-details-marker{display:none}
-details.more summary::after{content:"+";font-family:var(--f-mono)}
-details.more[open] summary::after{content:"–"}
+.skills p{margin-bottom:.7em}
+.skills b{font-weight:600}
 
-/* patents */
-.patents{display:grid;gap:14px}
-.patent{padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;display:grid;gap:6px}
-.patent .num{font-family:var(--f-mono);font-size:.9375rem;color:var(--accent)}
-.patent h3{font-size:var(--s1);font-family:var(--f-body);font-weight:600}
-.patent p{color:var(--muted);font-size:.9375rem}
-.status{font-family:var(--f-mono);font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-left:8px;vertical-align:2px}
+dl.faq{margin:0}
+.faq dt{font-weight:600;margin-top:1em}
+.faq dt:first-child{margin-top:0}
+.faq dd{margin:.2em 0 0}
 
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 36px}
-@media (max-width:700px){.skills{grid-template-columns:1fr}}
-.skills h3{font-size:var(--s0);font-family:var(--f-body);font-weight:600;margin-bottom:8px}
-.skills ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.skills li{font-size:.875rem;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.contact .mail{font-family:var(--serif);font-size:clamp(1.2rem,3vw,1.5rem)}
+.copy{font:inherit;font-size:.85rem;margin-left:10px;padding:3px 10px;border:1px solid var(--rule);border-radius:4px;background:transparent;color:var(--ink);cursor:pointer;vertical-align:3px}
+.contact .links{color:var(--soft)}
 
-/* honors */
-.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
-@media (max-width:700px){.two{grid-template-columns:1fr}}
-.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.list li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:12px}
-.list .date{font-family:var(--f-mono);font-size:var(--s-1);color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
-.list small{display:block;color:var(--muted);font-size:.875rem}
-.two h3{font-size:var(--s1);margin-bottom:12px}
-
-/* contact */
-.contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:start}
-@media (max-width:760px){.contact{grid-template-columns:1fr}}
-.contact .lead{font-size:var(--s1);max-width:52ch}
-.links{display:grid;gap:10px}
-.links .row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-width:0}
-.links .row span{font-family:var(--f-mono);font-size:var(--s-1);color:var(--muted)}
-.links .row a,.links .row .val{overflow-wrap:anywhere;text-align:right}
-.copy{font-family:var(--f-mono);font-size:.75rem;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:6px;padding:3px 8px;cursor:pointer;margin-left:8px}
-footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);font-size:.875rem}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);font-size:.9rem}
 </style>
-
-<style>body{margin:0}img{max-width:100%}</style>
 </head>
 <body>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top">Thien An <span>Le</span></a>
-    <nav aria-label="Sections">
-      <ul>
-        <li><a href="#about">about</a></li>
-        <li><a href="#research">research</a></li>
-        <li><a href="#publications">publications</a></li>
-        <li class="opt"><a href="#patents">patents</a></li>
-        <li class="opt"><a href="#experience">experience</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="page">
+
+<header class="bar">
+  <strong>Thien An Le</strong>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#papers">Papers</a>
+    <a class="wide" href="#patents">Patents</a>
+    <a class="wide" href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main id="top">
-  <section class="hero" aria-labelledby="name">
-    <div class="wrap">
-      <div>
-        <div class="ident">
-          <img class="portrait" src="photo.jpg" width="600" height="750" alt="Portrait of Thien An (Michael) Le">
-          <div>
-            <p class="eyebrow">Ph.D. Chemical Engineering · Houston, Texas</p>
-            <h1 id="name" style="margin-top:10px">Thien An Le <span class="alias">(Michael)</span></h1>
-            <p class="role">Catalysis Scientist</p>
-          </div>
-        </div>
-        <p class="focus">Heterogeneous catalysis | hydrogen production and ammonia cracking | catalyst design, scale-up and technology transfer. Ten-plus years taking catalysts from synthesis and mechanism to pilot testing and industrial licensing.</p>
-        <div class="facts">
-          <span class="chip key">U.S. Permanent Resident · no sponsorship needed</span>
-          <span class="chip">Open to relocation</span>
-          <span class="chip">Industry · National labs · Academia</span>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Contact me</a>
-          <a class="btn ghost" href="Thien_An_Le_CV.pdf" download>Download CV (PDF)</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/thien-an-le-a8149769" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn ghost" href="https://scholar.google.com/citations?user=KQ3BfykAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="btn ghost" href="https://sites.google.com/view/thienanle/resume" target="_blank" rel="noopener">Personal page</a>
-          <a class="btn ghost" href="https://sites.google.com/view/c-thienan-le" target="_blank" rel="noopener">Projects summary</a>
-        </div>
-      </div>
-      <aside class="reaction" aria-label="Flagship result">
-        <p class="eyebrow">Flagship result · J. Mater. Chem. A 2026</p>
-        <p class="eq">2 NH<sub>3</sub> <b>→</b> N<sub>2</sub> + 3 H<sub>2</sub></p>
-        <dl>
-          <dt>catalyst</dt><dd>Cs–Ru / N-doped CeO<sub>2</sub></dd>
-          <dt>T</dt><dd>450 °C</dd>
-          <dt>stability</dt><dd>100 h on stream</dd>
-        </dl>
-        <div class="big">
-          <strong>2,115</strong>
-          <span>mmol H<sub>2</sub> min⁻¹ g<sub>Ru</sub>⁻¹</span>
-        </div>
-        <p class="src">N doping tunes the Ru electronic state and lowers the barrier for recombinative N<sub>2</sub> desorption (DFT). <a href="https://doi.org/10.1039/D5TA10316A" target="_blank" rel="noopener">Read the paper</a></p>
-      </aside>
-    </div>
-  </section>
-
-  <section id="about" class="sec" aria-labelledby="about-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="about-h">About</h2></div>
-      <div class="prose">
-        <p>I design catalysts that turn ammonia and CO<sub>2</sub> into useful energy, and I care about taking them past the paper stage.</p>
-        <p>From 2012 to 2026 I worked in Korea at <strong>KRICT</strong> (Korea Research Institute of Chemical Technology), <strong>Ajou University</strong> and <strong>Kyung Hee University</strong>, across the full catalyst cycle: synthesis, characterization, kinetic and stability testing, bench-to-pilot scale-up, and technology transfer to industry. Two of those technologies were licensed, to <strong>Lotte Chemical Corporation</strong> and <strong>CES Co., Ltd.</strong>, and the ammonia-cracking program was selected among Korea's National Top 100 R&amp;D Performances in 2023.</p>
-        <p>I am now based in Houston, Texas, as a U.S. Permanent Resident. I am looking for R&amp;D roles in heterogeneous catalysis, hydrogen and energy, environmental technology or advanced materials, in industry, national laboratories or academia.</p>
-        <p class="legend">Education: Ph.D. Energy Chemical Engineering, Ajou University (2019) · M.E. Chemical Engineering, Kyung Hee University (2014) · B.E. Chemical Engineering, Industrial University of Ho Chi Minh City (2009). Languages: English (full professional), Vietnamese (native).</p>
+<main>
+  <div class="intro">
+    <img src="photo.jpg" width="600" height="750" alt="Thien An Le, smiling, in glasses and a dark blazer" fetchpriority="high">
+    <div>
+      <h1>Thien An Le, Ph.D.</h1>
+      <p class="aka">Catalysis scientist. I also go by Michael.</p>
+      <p class="lede">I make catalysts that get hydrogen out of ammonia and turn CO<sub>2</sub> into methane. Two of them left the lab under license: one to Lotte Chemical, one to CES Co., Ltd.</p>
+      <p class="status">Houston, Texas. U.S. permanent resident, so no sponsorship is needed, and I'm open to relocating. Looking for R&amp;D roles in catalysis, hydrogen or energy, in industry, a national lab or a university.</p>
+      <div class="go">
+        <a class="btn" href="mailto:thienan.mr@gmail.com">Email me</a>
+        <a href="Thien_An_Le_CV.pdf" download>CV, 2 pages (PDF)</a>
+        <a href="https://www.linkedin.com/in/thien-an-le-a8149769" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=KQ3BfykAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="glance" class="sec" aria-labelledby="glance-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="glance-h">At a glance</h2><p class="legend">Citation figures from Google Scholar, Oct 2026</p></div>
-      <div class="glance">
-        <div><strong>21</strong><p>peer-reviewed papers, 17 as first or co-first author</p></div>
-        <div><strong>1,600+</strong><p>citations, h-index 17</p></div>
-        <div><strong>3</strong><p>U.S. patent families, granted in US, Korea, Japan and China</p></div>
-        <div><strong>2</strong><p>technology transfers to industry (Lotte Chemical, CES)</p></div>
-        <div><strong>18</strong><p>conference talks, including ICC16, APCAT-8, NGCS12 and ICEC2022</p></div>
-        <div><strong>Top 100</strong><p>Korea National R&amp;D Performances, 2023</p></div>
-      </div>
+  <div class="result" aria-label="Best result to date">
+    <p class="label">Best result to date · J. Mater. Chem. A, 2026</p>
+    <div>
+      <div class="num">2,115</div>
+      <div class="unit">mmol H<sub>2</sub> min⁻¹ g<sub>Ru</sub>⁻¹ at 450 °C</div>
+    </div>
+    <p>Cs-promoted Ru on nitrogen-doped CeO<sub>2</sub>, held for 100 h on stream. The nitrogen shifts the electronic state of Ru so surface N atoms pair up and leave as N<sub>2</sub> more easily, which is the slow step on Ru. DFT from our collaborators agrees. <a href="https://doi.org/10.1039/D5TA10316A" rel="noopener">The paper</a></p>
+  </div>
+
+  <ul class="numbers">
+    <li><b>21</b> peer-reviewed papers, 17 first or co-first author</li>
+    <li><b>1,600+</b> citations, h-index 17 (Google Scholar, Oct 2026)</li>
+    <li><b>1</b> U.S. patent granted, 2 U.S. applications pending, 7 grants in Korea, Japan and China</li>
+    <li><b>2</b> licensed technologies</li>
+    <li><b>18</b> conference talks</li>
+    <li>Korea National Top 100 R&amp;D, 2023</li>
+  </ul>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <div class="prose">
+      <p>Ammonia is an easy way to ship hydrogen. Getting the hydrogen back out, at a temperature and a catalyst cost a plant will accept, is the hard part. That's what I worked on at KRICT (Korea Research Institute of Chemical Technology) from 2019 to 2026.</p>
+      <p>On ruthenium, the bottleneck is two nitrogen atoms finding each other and leaving the surface. Most of my work is about speeding that up: which ceria facet the Ru sits on, putting nitrogen or lanthanum into the support, adding cesium. Every catalyst gets the same treatment, characterization (TPR, TPD, XPS, STEM, synchrotron XAS, in situ DRIFTS) read against kinetics, so I can say why it works and not only that it does.</p>
+      <p>A powder that looks great in a lab reactor can still fail in a plant. So the later work moved to 3&nbsp;mm beads, less Ru, runs of 100 to 150 hours, and pilot fixed-bed tests. The solvothermal Ru/CeO<sub>2</sub> catalyst made it the whole way and was licensed to Lotte Chemical.</p>
+      <p>Before KRICT I did my Ph.D. at Ajou University with Prof. Eun Duck Park, on nickel and cobalt catalysts for CO and CO<sub>2</sub> methanation. That work produced 10 first-author papers and a granted patent, and it was licensed to CES Co., Ltd. Before that came an M.E. at Kyung Hee University (bio-oil from seaweed) and a B.E. at the Industrial University of Ho Chi Minh City. I work in English and Vietnamese.</p>
     </div>
   </section>
 
-  <section id="approach" class="sec" aria-labelledby="approach-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="approach-h">How I work</h2></div>
-      <div class="principles">
-        <div>
-          <h3>Start from the rate-limiting step</h3>
-          <p>For NH<sub>3</sub> cracking on Ru that step is recombinative N<sub>2</sub> desorption. Support facets, N doping, La–Ce composites and alkali promoters are each chosen to speed it up, and DFT partners check the mechanism.</p>
-        </div>
-        <div>
-          <h3>Tie structure to performance</h3>
-          <p>Every catalyst gets the same evidence chain: H<sub>2</sub>-TPR, CO<sub>2</sub>/NH<sub>3</sub>-TPD, TPSR, chemisorption, XRD, XPS, HAADF-STEM, Raman, EPR, in situ DRIFTS and synchrotron XAS, read against kinetic data.</p>
-        </div>
-        <div>
-          <h3>Design for the plant, not the paper</h3>
-          <p>Shaped beads instead of powders, low Ru loading, long stability runs and pilot fixed-bed tests. That habit is what carried two catalyst technologies into licensing agreements.</p>
-        </div>
-      </div>
+  <section id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Work</h2>
+    <div>
+      <article class="project">
+        <h3>Ru catalysts for low-temperature ammonia cracking</h3>
+        <p class="where">KRICT, Hydrogen &amp; C1 Gas Research Center · 2019–2026</p>
+        <p>Part of the national program "Integrated Original Technology for Use in Hydrogen Production and Storage".</p>
+        <ul>
+          <li>Supports engineered around CeO<sub>2</sub>: {100} facets, La<sub>2</sub>O<sub>3</sub>–CeO<sub>2</sub> composites, N-doped CeO<sub>2</sub>, with Cs as promoter.</li>
+          <li>Solvothermal, alcohol-assisted Ru/CeO<sub>2</sub>: 1,319.6 mmol H<sub>2</sub> min⁻¹ g<sub>Ru</sub>⁻¹ at 450 °C, stable for 100 h. Covered by US 12,251,684 B2.</li>
+          <li>Taken from bench to pilot and licensed to Lotte Chemical Corporation.</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>Cheaper metals, and shapes a reactor can use</h3>
+        <p class="where">KRICT · 2022–2026</p>
+        <ul>
+          <li>Ni/Al–Ce oxides made in one pot by cation–anion double hydrolysis: full NH<sub>3</sub> conversion near 550 °C, no Ru.</li>
+          <li>Ce-modified Co–Fe layered double oxides: 81.9% conversion at 450 °C, stable 80 h at 550 °C.</li>
+          <li>3 mm Ru/Al<sub>2</sub>O<sub>3</sub> beads with a K-promoted La–Ce shell: about 80% conversion near 500 °C for 150 h in a bench reactor.</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>Ni and Co catalysts for CO and CO<sub>2</sub> methanation</h3>
+        <p class="where">Ajou University, Ph.D. with Prof. Eun Duck Park · 2015–2019</p>
+        <p>Program "Novel Catalyst Technology for C1 Gas Activation". I varied the support (Al<sub>2</sub>O<sub>3</sub> phases, SiO<sub>2</sub>, SiC, CeO<sub>2</sub>, core–shell Al@Al<sub>2</sub>O<sub>3</sub> and Al@MAl<sub>2</sub>O<sub>4</sub> spinels), the promoter and the preparation route. Ten first-author papers; the results backed a granted patent and the license to CES Co., Ltd.</p>
+      </article>
+      <article class="project minor">
+        <h3>Bio-oil from seaweed</h3>
+        <p class="where">Kyung Hee University, M.E. · 2012–2014</p>
+        <p>Catalytic pyrolysis of <i>Saccharina japonica</i> and CoP/Al<sub>2</sub>O<sub>3</sub> catalysts for hydrodeoxygenation of the oil. Two first-author papers.</p>
+      </article>
     </div>
   </section>
 
-  <section id="research" class="sec" aria-labelledby="research-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="research-h">Research &amp; projects</h2></div>
-      <div class="areas">
-        <article class="area">
-          <div><p class="when">KRICT · 2019–2026</p></div>
-          <div>
-            <h3>Ru catalysts for low-temperature ammonia cracking</h3>
-            <p>National program "Integrated Original Technology for Use in Hydrogen Production and Storage", Hydrogen &amp; C1 Gas Research Center.</p>
-            <ul>
-              <li>Engineered CeO<sub>2</sub> supports (CeO<sub>2</sub>{100} facets, La<sub>2</sub>O<sub>3</sub>–CeO<sub>2</sub> composites, N-doped CeO<sub>2</sub>) with Cs promotion.</li>
-              <li>Solvothermal, alcohol-assisted Ru/CeO<sub>2</sub> route: 1,319.6 mmol H<sub>2</sub> min⁻¹ g<sub>Ru</sub>⁻¹ at 450 °C, stable for 100 h; protected by US 12,251,684 B2.</li>
-              <li>Bench-to-pilot testing and technology transfer to Lotte Chemical Corporation.</li>
-            </ul>
-            <div class="tags"><span>NH₃ decomposition</span><span>Ru/CeO₂</span><span>pilot scale</span><span>tech transfer</span></div>
-          </div>
-        </article>
-        <article class="area">
-          <div><p class="when">KRICT · 2022–2026</p></div>
-          <div>
-            <h3>Ru-free and shaped catalysts</h3>
-            <ul>
-              <li>Ni/Al–Ce oxides by one-pot cation–anion double hydrolysis: full NH<sub>3</sub> conversion near 550 °C.</li>
-              <li>Ce-modified Co–Fe layered double oxides: 81.9% conversion at 450 °C, 80 h stable at 550 °C.</li>
-              <li>3 mm Ru/Al<sub>2</sub>O<sub>3</sub> beads with a K-promoted La–Ce shell: ~80% conversion at ~500 °C for 150 h in a bench reactor.</li>
-            </ul>
-            <div class="tags"><span>Ni</span><span>Co–Fe</span><span>shaped catalysts</span><span>surface gelation</span></div>
-          </div>
-        </article>
-        <article class="area">
-          <div><p class="when">Ajou University · 2015–2019</p></div>
-          <div>
-            <h3>Ni and Co catalysts for CO and CO<sub>2</sub> methanation</h3>
-            <p>Ph.D. with Prof. Eun Duck Park, program "Novel Catalyst Technology for C1 Gas Activation".</p>
-            <ul>
-              <li>Tuned supports (Al<sub>2</sub>O<sub>3</sub> phases, SiO<sub>2</sub>, SiC, CeO<sub>2</sub>, core–shell Al@Al<sub>2</sub>O<sub>3</sub> and Al@MAl<sub>2</sub>O<sub>4</sub> spinels), promoters and preparation methods.</li>
-              <li>10 first-author papers; results supported a granted patent and a technology transfer to CES Co., Ltd.</li>
-            </ul>
-            <div class="tags"><span>CO₂ utilization</span><span>deposition–precipitation</span><span>in situ DRIFTS</span></div>
-          </div>
-        </article>
-        <article class="area">
-          <div><p class="when">Kyung Hee University · 2012–2014</p></div>
-          <div>
-            <h3>Biofuel from macroalgae pyrolysis</h3>
-            <p>Catalytic pyrolysis of <i>Saccharina japonica</i> and CoP/Al<sub>2</sub>O<sub>3</sub> catalysts for bio-oil hydrodeoxygenation; 2 first-author papers.</p>
-            <div class="tags"><span>biomass pyrolysis</span><span>hydrodeoxygenation</span></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="news" class="sec" aria-labelledby="news-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="news-h">News</h2></div>
-      <ul class="news">
-        <li><span class="date">2026</span><p>Cs–Ru/N-doped CeO<sub>2</sub> paper published in <i>Journal of Materials Chemistry A</i>. <a href="https://doi.org/10.1039/D5TA10316A" target="_blank" rel="noopener">Paper</a></p></li>
-        <li><span class="date">2026</span><p>Solvothermal Ru catalyst paper accepted in <i>International Journal of Hydrogen Energy</i>.</p></li>
-        <li><span class="date">2026</span><p>Shaped Ru/Al<sub>2</sub>O<sub>3</sub> bead catalyst published in <i>Applied Catalysis B: Environment and Energy</i>.</p></li>
-        <li><span class="date">Mar 2025</span><p>US Patent 12,251,684 B2 issued for the solvothermal ammonia-decomposition catalyst.</p></li>
-        <li><span class="date">2025</span><p>Talk on nitrogen-doped ceria for Ru-catalyzed ammonia decomposition, Korean Society of Clean Technology Fall Conference.</p></li>
-        <li><span class="date">May 2024</span><p>Guest Editor, <i>Catalysts</i> special issue "State-of-the-Art Catalytic Conversion of Biomass and Their Derivatives in Asia". <a href="https://www.mdpi.com/journal/catalysts/special_issues/W8J000XHN2" target="_blank" rel="noopener">Special issue</a></p></li>
-        <li><span class="date">Nov 2023</span><p>Ammonia-cracking catalyst R&amp;D selected among Korea's National Top 100 R&amp;D Performances.</p></li>
-        <li><span class="date">Dec 2022</span><p>Session Chair, Chemistry and Chemical Engineering, ACVYS 2022 (Contribution Award). Spoke on chemical-industry cooperation at the Embassy of Vietnam's science and technology seminar in Korea.</p></li>
-        <li><span class="date">Apr 2022</span><p>Low-cost Ru-free Ni catalyst for hydrogen from ammonia covered by Energy &amp; Environment News. <a href="http://www.e2news.com/news/articleView.html?idxno=241296" target="_blank" rel="noopener">Article</a></p></li>
-        <li><span class="date">Sep 2021</span><p>Chae Yung Bog Best Paper Award, KRICT. Nomination Reviewer for the VinFuture Prize since 2021.</p></li>
-        <li><span class="date">Jul 2021</span><p>Session Chair, ACVYS 2021 (Contribution Award). Guest Editor, <i>Catalysts</i> special issue "New Insights into Catalytic Production and Upgrading of Bio-Oil".</p></li>
-        <li><span class="date">Jun 2021</span><p>Joined the Editorial Board of <i>Catalysts</i> (MDPI).</p></li>
-        <li><span class="date">Jan 2021</span><p>Ru on La–Ce composite catalyst for high-efficiency hydrogen from ammonia covered by Energy News. <a href="http://www.energy-news.co.kr/news/articleView.html?idxno=75108" target="_blank" rel="noopener">Article</a></p></li>
-        <li><span class="date">May 2019</span><p>Excellent Research Award, ACVYS 2019. Oral talks at APCAT-8 and the 12th Natural Gas Conversion Symposium the same year.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="publications" class="sec" aria-labelledby="pub-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="pub-h">Publications</h2><p class="legend"><span class="badge first">first</span> first or co-first author · newest first</p></div>
-      <p class="eyebrow" style="margin-bottom:6px">Selected</p>
-      <ul class="pubs" style="counter-reset:none">
-        <li style="counter-increment:none" data-n="1">
-          <div><p class="t"><a href="https://doi.org/10.1039/D5TA10316A" target="_blank" rel="noopener">Synergistic electronic modulation of Ru sites via N-doped CeO<sub>2</sub> and Cs promotion for high efficiency H<sub>2</sub> generation from ammonia decomposition</a></p>
-          <p class="authors"><em>T. A. Le</em>, Y. M. Kim, S. J. Han, Y. H. Im, M. S. Kim, Y. J. Lee, H. J. Chae</p>
-          <div class="meta"><span class="badge first">co-first</span><span>J. Mater. Chem. A 14, 14103–14114 (2026)</span></div></div>
-        </li>
-        <li style="counter-increment:none">
-          <div><p class="t"><a href="https://doi.org/10.1016/j.cej.2024.152503" target="_blank" rel="noopener">Ru dispersed on CeO<sub>2</sub>{1 0 0} facets boosting the catalytic NH<sub>3</sub> decomposition for green H<sub>2</sub> generation</a></p>
-          <p class="authors"><em>T. A. Le</em>, Y. M. Kim, S. J. Han, Q. C. Do, G. J. Kim, Y. H. Im, H. J. Chae</p>
-          <div class="meta"><span class="badge first">co-first</span><span>Chem. Eng. J. 493, 152503 (2024)</span></div></div>
-        </li>
-        <li style="counter-increment:none">
-          <div><p class="t"><a href="https://doi.org/10.1016/j.apcatb.2020.119831" target="_blank" rel="noopener">Ru-supported lanthania-ceria composite as an efficient catalyst for COx-free H<sub>2</sub> production from ammonia decomposition</a></p>
-          <p class="authors"><em>T. A. Le</em>, Y. M. Kim, H. W. Kim, S. U. Lee, J. R. Kim, T. W. Kim, Y. J. Lee, H. J. Chae</p>
-          <div class="meta"><span class="badge first">co-first</span><span>Appl. Catal. B 285, 119831 (2021)</span></div></div>
-        </li>
-        <li style="counter-increment:none">
-          <div><p class="t"><a href="https://doi.org/10.1007/s11814-021-0767-7" target="_blank" rel="noopener">A review on the recent developments of ruthenium and nickel catalysts for COx-free H<sub>2</sub> generation by ammonia decomposition</a></p>
-          <p class="authors"><em>T. A. Le</em>, Q. C. Do, Y. M. Kim, T. W. Kim, H. J. Chae</p>
-          <div class="meta"><span class="badge first">co-first</span><span>Korean J. Chem. Eng. 38, 1087–1103 (2021) · invited review</span></div></div>
-        </li>
-        <li style="counter-increment:none">
-          <div><p class="t"><a href="https://doi.org/10.1016/j.cattod.2016.12.036" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over supported Ni catalysts</a></p>
-          <div class="meta"><span class="badge first">first</span><span>Catal. Today 293–294, 89–96 (2017) · most cited paper</span></div></div>
-        </li>
+  <section id="papers" aria-labelledby="papers-h">
+    <h2 id="papers-h">Papers</h2>
+    <div>
+      <p class="prose">Five I'd read first. My name is in <span class="me">teal</span>; all five are first or co-first author.</p>
+      <ul class="pubs">
+        <li><a href="https://doi.org/10.1039/D5TA10316A" rel="noopener">Synergistic electronic modulation of Ru sites via N-doped CeO<sub>2</sub> and Cs promotion for high efficiency H<sub>2</sub> generation from ammonia decomposition</a><span class="src"><span class="me">T. A. Le</span>, Y. M. Kim, S. J. Han, Y. H. Im, M. S. Kim, Y. J. Lee, H. J. Chae · J. Mater. Chem. A 14, 14103–14114 (2026)</span></li>
+        <li><a href="https://doi.org/10.1016/j.cej.2024.152503" rel="noopener">Ru dispersed on CeO<sub>2</sub>{1 0 0} facets boosting the catalytic NH<sub>3</sub> decomposition for green H<sub>2</sub> generation</a><span class="src"><span class="me">T. A. Le</span>, Y. M. Kim, S. J. Han, Q. C. Do, G. J. Kim, Y. H. Im, H. J. Chae · Chem. Eng. J. 493, 152503 (2024)</span></li>
+        <li><a href="https://doi.org/10.1016/j.apcatb.2020.119831" rel="noopener">Ru-supported lanthania-ceria composite as an efficient catalyst for COx-free H<sub>2</sub> production from ammonia decomposition</a><span class="src"><span class="me">T. A. Le</span>, Y. M. Kim, H. W. Kim, S. U. Lee, J. R. Kim, T. W. Kim, Y. J. Lee, H. J. Chae · Appl. Catal. B 285, 119831 (2021)</span></li>
+        <li><a href="https://doi.org/10.1007/s11814-021-0767-7" rel="noopener">A review on the recent developments of ruthenium and nickel catalysts for COx-free H<sub>2</sub> generation by ammonia decomposition</a><span class="src"><span class="me">T. A. Le</span>, Q. C. Do, Y. M. Kim, T. W. Kim, H. J. Chae · Korean J. Chem. Eng. 38, 1087–1103 (2021), invited review</span></li>
+        <li><a href="https://doi.org/10.1016/j.cattod.2016.12.036" rel="noopener">CO and CO<sub>2</sub> methanation over supported Ni catalysts</a><span class="src">Catal. Today 293–294, 89–96 (2017). My most cited paper.</span></li>
       </ul>
 
-      <details class="more" id="all-pubs">
-        <summary>All 21 peer-reviewed papers</summary>
+      <details>
+        <summary>All 21 papers, newest first</summary>
         <ul class="pubs">
           <li class="yr">2026</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1039/D5TA10316A" target="_blank" rel="noopener">Synergistic electronic modulation of Ru sites via N-doped CeO<sub>2</sub> and Cs promotion for high efficiency H<sub>2</sub> generation from ammonia decomposition</a></p><div class="meta"><span class="badge first">co-first</span><span>J. Mater. Chem. A 14, 14103–14114</span></div></div></li>
-          <li><div><p class="t">Solvothermal processed Ru-based catalyst enhances ammonia decomposition efficiency for carbon-free H<sub>2</sub> production</p><div class="meta"><span class="badge first">first</span><span>Int. J. Hydrogen Energy (accepted)</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.apcatb.2025.126295" target="_blank" rel="noopener">Ru/Al<sub>2</sub>O<sub>3</sub> bead-shaped catalyst with La–Ce composite surface layer via direct surface gelation for enhanced ammonia decomposition</a></p><div class="meta"><span class="badge">co-author</span><span>Appl. Catal. B: Environ. Energy 385, 126295</span></div></div></li>
+          <li><a href="https://doi.org/10.1039/D5TA10316A" rel="noopener">Synergistic electronic modulation of Ru sites via N-doped CeO<sub>2</sub> and Cs promotion for high efficiency H<sub>2</sub> generation from ammonia decomposition</a><span class="src">J. Mater. Chem. A 14, 14103–14114 · co-first</span></li>
+          <li><strong>Solvothermal processed Ru-based catalyst enhances ammonia decomposition efficiency for carbon-free H<sub>2</sub> production</strong><span class="src">Int. J. Hydrogen Energy, accepted · first</span></li>
+          <li><a href="https://doi.org/10.1016/j.apcatb.2025.126295" rel="noopener">Ru/Al<sub>2</sub>O<sub>3</sub> bead-shaped catalyst with La–Ce composite surface layer via direct surface gelation for enhanced ammonia decomposition</a><span class="src">Appl. Catal. B: Environ. Energy 385, 126295 · co-author</span></li>
           <li class="yr">2024</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cej.2024.157605" target="_blank" rel="noopener">Turning properties of Ni/Al<sub>2</sub>O<sub>3</sub> catalyst to improve catalytic ammonia decomposition for green hydrogen production: pH does matter!</a></p><div class="meta"><span class="badge">co-author</span><span>Chem. Eng. J. 501, 157605</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cej.2024.156986" target="_blank" rel="noopener">CeO<sub>2</sub>-conjugated CoFe layered double oxides as efficient non-noble metal catalysts for NH<sub>3</sub>-decomposition enabling carbon-free hydrogen production</a></p><div class="meta"><span class="badge">co-author</span><span>Chem. Eng. J. 500, 156986</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cej.2024.152503" target="_blank" rel="noopener">Ru dispersed on CeO<sub>2</sub>{1 0 0} facets boosting the catalytic NH<sub>3</sub> decomposition for green H<sub>2</sub> generation</a></p><div class="meta"><span class="badge first">co-first</span><span>Chem. Eng. J. 493, 152503</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.cej.2024.157605" rel="noopener">Turning properties of Ni/Al<sub>2</sub>O<sub>3</sub> catalyst to improve catalytic ammonia decomposition for green hydrogen production: pH does matter!</a><span class="src">Chem. Eng. J. 501, 157605 · co-author</span></li>
+          <li><a href="https://doi.org/10.1016/j.cej.2024.156986" rel="noopener">CeO<sub>2</sub>-conjugated CoFe layered double oxides as efficient non-noble metal catalysts for NH<sub>3</sub>-decomposition enabling carbon-free hydrogen production</a><span class="src">Chem. Eng. J. 500, 156986 · co-author</span></li>
+          <li><a href="https://doi.org/10.1016/j.cej.2024.152503" rel="noopener">Ru dispersed on CeO<sub>2</sub>{1 0 0} facets boosting the catalytic NH<sub>3</sub> decomposition for green H<sub>2</sub> generation</a><span class="src">Chem. Eng. J. 493, 152503 · co-first</span></li>
           <li class="yr">2022</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.apcatb.2022.121167" target="_blank" rel="noopener">Facile one-pot synthesis of Ni-based catalysts by cation-anion double hydrolysis method as highly active Ru-free catalysts for green H<sub>2</sub> production via NH<sub>3</sub> decomposition</a></p><div class="meta"><span class="badge">co-author</span><span>Appl. Catal. B 307, 121167</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.apcatb.2022.121167" rel="noopener">Facile one-pot synthesis of Ni-based catalysts by cation-anion double hydrolysis method as highly active Ru-free catalysts for green H<sub>2</sub> production via NH<sub>3</sub> decomposition</a><span class="src">Appl. Catal. B 307, 121167 · co-author</span></li>
           <li class="yr">2021</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1007/s11814-021-0767-7" target="_blank" rel="noopener">A review on the recent developments of ruthenium and nickel catalysts for COx-free H<sub>2</sub> generation by ammonia decomposition</a></p><div class="meta"><span class="badge first">co-first</span><span>Korean J. Chem. Eng. 38, 1087–1103</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.apcatb.2020.119831" target="_blank" rel="noopener">Ru-supported lanthania-ceria composite as an efficient catalyst for COx-free H<sub>2</sub> production from ammonia decomposition</a></p><div class="meta"><span class="badge first">co-first</span><span>Appl. Catal. B 285, 119831</span></div></div></li>
+          <li><a href="https://doi.org/10.1007/s11814-021-0767-7" rel="noopener">A review on the recent developments of ruthenium and nickel catalysts for COx-free H<sub>2</sub> generation by ammonia decomposition</a><span class="src">Korean J. Chem. Eng. 38, 1087–1103 · co-first</span></li>
+          <li><a href="https://doi.org/10.1016/j.apcatb.2020.119831" rel="noopener">Ru-supported lanthania-ceria composite as an efficient catalyst for COx-free H<sub>2</sub> production from ammonia decomposition</a><span class="src">Appl. Catal. B 285, 119831 · co-first</span></li>
           <li class="yr">2020</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cattod.2019.09.028" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over Ni/Al@Al<sub>2</sub>O<sub>3</sub> core–shell catalyst</a></p><div class="meta"><span class="badge first">first</span><span>Catal. Today 356, 622–630</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cattod.2019.08.058" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over M (M = Mn, Ce, Zr, Mg, K, Zn, or V)-promoted Ni/Al@Al<sub>2</sub>O<sub>3</sub> catalysts</a></p><div class="meta"><span class="badge first">first</span><span>Catal. Today 348, 80–88</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.cattod.2019.09.028" rel="noopener">CO and CO<sub>2</sub> methanation over Ni/Al@Al<sub>2</sub>O<sub>3</sub> core–shell catalyst</a><span class="src">Catal. Today 356, 622–630 · first</span></li>
+          <li><a href="https://doi.org/10.1016/j.cattod.2019.08.058" rel="noopener">CO and CO<sub>2</sub> methanation over M (M = Mn, Ce, Zr, Mg, K, Zn, or V)-promoted Ni/Al@Al<sub>2</sub>O<sub>3</sub> catalysts</a><span class="src">Catal. Today 348, 80–88 · first</span></li>
           <li class="yr">2019</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.apcata.2019.05.020" target="_blank" rel="noopener">Active Ni/SiO<sub>2</sub> catalysts with high Ni content for benzene hydrogenation and CO methanation</a></p><div class="meta"><span class="badge first">first</span><span>Appl. Catal. A 581, 67–73</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.3390/catal9070599" target="_blank" rel="noopener">CO<sub>2</sub> methanation over Ni/Al@MAl<sub>2</sub>O<sub>4</sub> (M = Zn, Mg, or Mn) catalysts</a></p><div class="meta"><span class="badge first">first</span><span>Catalysts 9, 599</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1166/jnn.2019.16585" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over Ni/γ-Al<sub>2</sub>O<sub>3</sub> prepared by deposition-precipitation method</a></p><div class="meta"><span class="badge first">first</span><span>J. Nanosci. Nanotechnol. 19, 3252–3262</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.apcata.2019.05.020" rel="noopener">Active Ni/SiO<sub>2</sub> catalysts with high Ni content for benzene hydrogenation and CO methanation</a><span class="src">Appl. Catal. A 581, 67–73 · first</span></li>
+          <li><a href="https://doi.org/10.3390/catal9070599" rel="noopener">CO<sub>2</sub> methanation over Ni/Al@MAl<sub>2</sub>O<sub>4</sub> (M = Zn, Mg, or Mn) catalysts</a><span class="src">Catalysts 9, 599 · first</span></li>
+          <li><a href="https://doi.org/10.1166/jnn.2019.16585" rel="noopener">CO and CO<sub>2</sub> methanation over Ni/γ-Al<sub>2</sub>O<sub>3</sub> prepared by deposition-precipitation method</a><span class="src">J. Nanosci. Nanotechnol. 19, 3252–3262 · first</span></li>
           <li class="yr">2018</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cattod.2017.09.031" target="_blank" rel="noopener">Effects of Na content in Na/Ni/SiO<sub>2</sub> and Na/Ni/CeO<sub>2</sub> catalysts for CO and CO<sub>2</sub> methanation</a></p><div class="meta"><span class="badge first">first</span><span>Catal. Today 303, 159–167</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1007/s11244-018-0965-7" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over Ni/SiC and Ni/SiO<sub>2</sub> catalysts</a></p><div class="meta"><span class="badge first">first</span><span>Top. Catal. 61, 1537–1544</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.cattod.2017.09.031" rel="noopener">Effects of Na content in Na/Ni/SiO<sub>2</sub> and Na/Ni/CeO<sub>2</sub> catalysts for CO and CO<sub>2</sub> methanation</a><span class="src">Catal. Today 303, 159–167 · first</span></li>
+          <li><a href="https://doi.org/10.1007/s11244-018-0965-7" rel="noopener">CO and CO<sub>2</sub> methanation over Ni/SiC and Ni/SiO<sub>2</sub> catalysts</a><span class="src">Top. Catal. 61, 1537–1544 · first</span></li>
           <li class="yr">2017</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cattod.2016.12.036" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over supported Ni catalysts</a></p><div class="meta"><span class="badge first">first</span><span>Catal. Today 293–294, 89–96</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1007/s11244-017-0788-y" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over supported cobalt catalysts</a></p><div class="meta"><span class="badge first">first</span><span>Top. Catal. 60, 714–720</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1007/s11814-017-0257-0" target="_blank" rel="noopener">CO and CO<sub>2</sub> methanation over Ni catalysts supported on alumina with different crystalline phases</a></p><div class="meta"><span class="badge first">first</span><span>Korean J. Chem. Eng. 34, 3085–3091</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.cattod.2016.12.036" rel="noopener">CO and CO<sub>2</sub> methanation over supported Ni catalysts</a><span class="src">Catal. Today 293–294, 89–96 · first</span></li>
+          <li><a href="https://doi.org/10.1007/s11244-017-0788-y" rel="noopener">CO and CO<sub>2</sub> methanation over supported cobalt catalysts</a><span class="src">Top. Catal. 60, 714–720 · first</span></li>
+          <li><a href="https://doi.org/10.1007/s11814-017-0257-0" rel="noopener">CO and CO<sub>2</sub> methanation over Ni catalysts supported on alumina with different crystalline phases</a><span class="src">Korean J. Chem. Eng. 34, 3085–3091 · first</span></li>
           <li class="yr">2014</li>
-          <li><div><p class="t"><a href="https://doi.org/10.1016/j.cej.2014.04.003" target="_blank" rel="noopener">Hydrodeoxygenation of 2-furyl methyl ketone as a model compound in bio-oil from pyrolysis of <i>Saccharina japonica</i> alga in fixed-bed reactor</a></p><div class="meta"><span class="badge first">first</span><span>Chem. Eng. J. 250, 157–163</span></div></div></li>
-          <li><div><p class="t"><a href="https://doi.org/10.1080/15567036.2013.839763" target="_blank" rel="noopener">Catalytic pyrolysis of alga <i>Saccharina japonica</i> using Co/γ-Al<sub>2</sub>O<sub>3</sub> and Ni/γ-Al<sub>2</sub>O<sub>3</sub> catalysts</a></p><div class="meta"><span class="badge first">first</span><span>Energy Sources, Part A 36, 2392–2400</span></div></div></li>
+          <li><a href="https://doi.org/10.1016/j.cej.2014.04.003" rel="noopener">Hydrodeoxygenation of 2-furyl methyl ketone as a model compound in bio-oil from pyrolysis of <i>Saccharina japonica</i> alga in fixed-bed reactor</a><span class="src">Chem. Eng. J. 250, 157–163 · first</span></li>
+          <li><a href="https://doi.org/10.1080/15567036.2013.839763" rel="noopener">Catalytic pyrolysis of alga <i>Saccharina japonica</i> using Co/γ-Al<sub>2</sub>O<sub>3</sub> and Ni/γ-Al<sub>2</sub>O<sub>3</sub> catalysts</a><span class="src">Energy Sources, Part A 36, 2392–2400 · first</span></li>
         </ul>
       </details>
 
-      <details class="more" id="talks">
-        <summary>18 conference presentations</summary>
-        <ul class="list" style="margin-top:14px">
-          <li><span class="date">2025</span><p>Nitrogen-doped ceria for Ru-catalyzed ammonia decomposition<small>Korean Society of Clean Technology Fall Conference</small></p></li>
-          <li><span class="date">2022</span><p>Ceria morphology effects on Ru/CeO<sub>2</sub> for ammonia decomposition<small>ACVYS 2022</small></p></li>
-          <li><span class="date">2022</span><p>CeO<sub>2</sub> morphology and Ru/CeO<sub>2</sub> for hydrogen from ammonia<small>12th International Conference on Environmental Catalysis (ICEC2022)</small></p></li>
-          <li><span class="date">2021</span><p>Ru and Ni catalysts for green hydrogen by ammonia decomposition<small>ACVYS 2021</small></p></li>
-          <li><span class="date">2019</span><p>CO and CO<sub>2</sub> methanation over core–shell spinel-supported Ni catalysts<small>8th Asia-Pacific Congress on Catalysis (APCAT-8)</small></p></li>
-          <li><span class="date">2019</span><p>Supported Ni catalysts for CO and CO<sub>2</sub> methanation<small>ACVYS 2019</small></p></li>
-          <li><span class="date">2019</span><p>CO hydrogenation over Ni on MAl<sub>2</sub>O<sub>4</sub>@Al supports<small>12th Natural Gas Conversion Symposium (NGCS12)</small></p></li>
-          <li><span class="date">2019</span><p>CO<sub>2</sub> methanation over promoted Ni catalysts<small>Int. Conf. on Applied Catalysis and Chemical Engineering (ACC-2019)</small></p></li>
-          <li><span class="date">2018</span><p>CO and CO<sub>2</sub> methanation over Ni/Al@Al<sub>2</sub>O<sub>3</sub> core–shell catalyst<small>Ajou–Chiba Joint Symposium</small></p></li>
-          <li><span class="date">2018</span><p>CO and CO<sub>2</sub> methanation over promoted Ni on Al@Al<sub>2</sub>O<sub>3</sub><small>8th Tokyo Conference on Advanced Catalytic Science and Technology (TOCAT8)</small></p></li>
-          <li><span class="date">2018</span><p>CO and CO<sub>2</sub> methanation over Ni/SiC and Ni/SiO<sub>2</sub><small>TOCAT8</small></p></li>
-          <li><span class="date">2017</span><p>Effects of Na on Ni catalysts for methanation<small>16th Korea–Japan Symposium on Catalysis</small></p></li>
-          <li><span class="date">2016</span><p>Effect of Na on CO and CO<sub>2</sub> methanation<small>iSGA-5, Busan · First Place Oral Presentation Award</small></p></li>
-          <li><span class="date">2016</span><p>COx hydrogenation to methane over Co–Ce oxide<small>KIChE Fall Meeting</small></p></li>
-          <li><span class="date">2016</span><p>CO<sub>2</sub> methanation over Co on CeO<sub>2</sub> and ZrO<sub>2</sub><small>16th International Congress on Catalysis (ICC16)</small></p></li>
-          <li><span class="date">2016</span><p>Comparative CO and CO<sub>2</sub> methanation over supported Co<small>Int. Symp. on Catalytic Conversion of Energy and Resources (ISCCER)</small></p></li>
-          <li><span class="date">2013</span><p>Hydrodeoxygenation of a bio-oil model compound from seaweed pyrolysis<small>3rd Asia-Pacific Forum on Renewable Energy (AFORE 2013)</small></p></li>
-          <li><span class="date">2013</span><p>Catalytic pyrolysis of seaweed using Co/γ-Al<sub>2</sub>O<sub>3</sub><small>WCCE9 &amp; APCChE 2013</small></p></li>
+      <details>
+        <summary>18 conference talks</summary>
+        <ul class="pubs talks">
+          <li>2025 · Nitrogen-doped ceria for Ru-catalyzed ammonia decomposition <span class="src">· Korean Society of Clean Technology Fall Conference</span></li>
+          <li>2022 · Ceria morphology effects on Ru/CeO<sub>2</sub> for ammonia decomposition <span class="src">· ACVYS 2022</span></li>
+          <li>2022 · CeO<sub>2</sub> morphology and Ru/CeO<sub>2</sub> for hydrogen from ammonia <span class="src">· 12th Int. Conf. on Environmental Catalysis (ICEC2022)</span></li>
+          <li>2021 · Ru and Ni catalysts for green hydrogen by ammonia decomposition <span class="src">· ACVYS 2021</span></li>
+          <li>2019 · CO and CO<sub>2</sub> methanation over core–shell spinel-supported Ni catalysts <span class="src">· 8th Asia-Pacific Congress on Catalysis (APCAT-8)</span></li>
+          <li>2019 · Supported Ni catalysts for CO and CO<sub>2</sub> methanation <span class="src">· ACVYS 2019</span></li>
+          <li>2019 · CO hydrogenation over Ni on MAl<sub>2</sub>O<sub>4</sub>@Al supports <span class="src">· 12th Natural Gas Conversion Symposium (NGCS12)</span></li>
+          <li>2019 · CO<sub>2</sub> methanation over promoted Ni catalysts <span class="src">· Int. Conf. on Applied Catalysis and Chemical Engineering (ACC-2019)</span></li>
+          <li>2018 · CO and CO<sub>2</sub> methanation over Ni/Al@Al<sub>2</sub>O<sub>3</sub> core–shell catalyst <span class="src">· Ajou–Chiba Joint Symposium</span></li>
+          <li>2018 · CO and CO<sub>2</sub> methanation over promoted Ni on Al@Al<sub>2</sub>O<sub>3</sub> <span class="src">· TOCAT8, Tokyo</span></li>
+          <li>2018 · CO and CO<sub>2</sub> methanation over Ni/SiC and Ni/SiO<sub>2</sub> <span class="src">· TOCAT8, Tokyo</span></li>
+          <li>2017 · Effects of Na on Ni catalysts for methanation <span class="src">· 16th Korea–Japan Symposium on Catalysis</span></li>
+          <li>2016 · Effect of Na on CO and CO<sub>2</sub> methanation <span class="src">· iSGA-5, Busan, first-place oral presentation</span></li>
+          <li>2016 · COx hydrogenation to methane over Co–Ce oxide <span class="src">· KIChE Fall Meeting</span></li>
+          <li>2016 · CO<sub>2</sub> methanation over Co on CeO<sub>2</sub> and ZrO<sub>2</sub> <span class="src">· 16th International Congress on Catalysis (ICC16)</span></li>
+          <li>2016 · Comparative CO and CO<sub>2</sub> methanation over supported Co <span class="src">· ISCCER</span></li>
+          <li>2013 · Hydrodeoxygenation of a bio-oil model compound from seaweed pyrolysis <span class="src">· AFORE 2013</span></li>
+          <li>2013 · Catalytic pyrolysis of seaweed using Co/γ-Al<sub>2</sub>O<sub>3</sub> <span class="src">· WCCE9 &amp; APCChE 2013</span></li>
         </ul>
       </details>
     </div>
   </section>
 
-  <section id="patents" class="sec" aria-labelledby="pat-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="pat-h">Patents</h2><p class="legend">3 families · KRICT</p></div>
-      <div class="patents">
-        <article class="patent">
-          <p class="num"><a href="https://patents.google.com/patent/US12251684B2" target="_blank" rel="noopener">US 12,251,684 B2</a><span class="status">issued Mar 2025</span></p>
-          <h3>Catalyst for decomposition of ammonia, manufacturing method therefor, and method for producing hydrogen using same</h3>
-          <p>Solvothermal, alcohol-assisted Ru catalysts with higher activity and long-term stability. Also granted as KR 10-2544718 and JP 7546784; related applications in China and Europe.</p>
-        </article>
-        <article class="patent">
-          <p class="num"><a href="https://patents.google.com/patent/US20230234841A1" target="_blank" rel="noopener">US 2023/0234841 A1</a><span class="status">US pending</span></p>
-          <h3>Ammonia decomposition catalyst, and method of decomposing ammonia and producing hydrogen by using the same</h3>
-          <p>Ru on a La–Ce composite oxide solid solution (La<sub>x</sub>Ce<sub>1−x</sub>O<sub>y</sub>). Granted as KR 10-2570390, CN 115916395 B and JP 7550887.</p>
-        </article>
-        <article class="patent">
-          <p class="num"><a href="https://patents.google.com/patent/US20240367154A1" target="_blank" rel="noopener">US 2024/0367154 A1</a><span class="status">US pending</span></p>
-          <h3>Ammonia decomposition catalyst and hydrogen production method using same</h3>
-          <p>Ru on shape-controlled CeO<sub>2</sub> with a Cs promoter. Granted as CN 116056789 B and JP 7525731.</p>
-        </article>
-      </div>
+  <section id="patents" aria-labelledby="pat-h">
+    <h2 id="pat-h">Patents</h2>
+    <div>
+      <p class="prose">Three patent families, all filed by KRICT with me as co-inventor. One is granted in the U.S.; the other two are pending there and already granted in Asia.</p>
+      <article class="patent">
+        <a class="id" href="https://patents.google.com/patent/US12251684B2" rel="noopener">US 12,251,684 B2</a><span class="state">granted Mar 2025</span>
+        <h3>Catalyst for decomposition of ammonia, manufacturing method therefor, and method for producing hydrogen using same</h3>
+        <p>The solvothermal, alcohol-assisted Ru catalyst. Also granted as KR 10-2544718 and JP 7546784; applications filed in China and Europe.</p>
+      </article>
+      <article class="patent">
+        <a class="id" href="https://patents.google.com/patent/US20230234841A1" rel="noopener">US 2023/0234841 A1</a><span class="state">pending in the U.S.</span>
+        <h3>Ammonia decomposition catalyst, and method of decomposing ammonia and producing hydrogen by using the same</h3>
+        <p>Ru on a La–Ce oxide solid solution (La<sub>x</sub>Ce<sub>1−x</sub>O<sub>y</sub>). Granted as KR 10-2570390, CN 115916395 B and JP 7550887.</p>
+      </article>
+      <article class="patent">
+        <a class="id" href="https://patents.google.com/patent/US20240367154A1" rel="noopener">US 2024/0367154 A1</a><span class="state">pending in the U.S.</span>
+        <h3>Ammonia decomposition catalyst and hydrogen production method using same</h3>
+        <p>Ru on shape-controlled CeO<sub>2</sub> with Cs. Granted as CN 116056789 B and JP 7525731.</p>
+      </article>
     </div>
   </section>
 
-  <section id="experience" class="sec" aria-labelledby="exp-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="exp-h">Experience</h2></div>
-      <ul class="timeline">
-        <li><span class="date">Sep 2019 – Oct 2026</span><div><h3>Researcher</h3><p class="org">Korea Research Institute of Chemical Technology (KRICT), Daejeon</p><p class="note">Ammonia-cracking catalysts from bench to pilot; technology transfer to Lotte Chemical; proposals, reports and patent applications for government and industry sponsors.</p></div></li>
-        <li><span class="date">Mar 2015 – Aug 2019</span><div><h3>Graduate Research Assistant (Ph.D.)</h3><p class="org">Ajou University, Suwon</p><p class="note">Ni and Co methanation catalysts; 10 first-author papers; technology transfer to CES Co., Ltd.</p></div></li>
-        <li><span class="date">Jun 2017 – Aug 2018</span><div><h3>Lecturer</h3><p class="org">Graduate School of International Studies, Ajou University</p><p class="note">Taught the master's course in Energy Engineering (about 20 international students per semester): energy sources, conversion technology, thermodynamics and catalyst applications.</p></div></li>
-        <li><span class="date">2012 – Feb 2014</span><div><h3>Graduate Research Assistant (M.E.)</h3><p class="org">Kyung Hee University, Yongin</p><p class="note">Macroalgae pyrolysis and bio-oil hydrodeoxygenation; 2 first-author papers.</p></div></li>
+  <section id="cv" aria-labelledby="cv-h">
+    <h2 id="cv-h">CV</h2>
+    <div>
+      <ul class="cv">
+        <li><span class="when">2019 – Oct 2026</span><div><p><b>Researcher</b>, KRICT, Daejeon</p><p class="sub">Ammonia-cracking catalysts from bench to pilot, the Lotte Chemical license, and the proposals, reports and patent filings for government and industry sponsors.</p></div></li>
+        <li><span class="when">2015 – 2019</span><div><p><b>Ph.D. researcher</b>, Ajou University, Suwon</p><p class="sub">Ni and Co methanation catalysts; 10 first-author papers; license to CES Co., Ltd.</p></div></li>
+        <li><span class="when">2017 – 2018</span><div><p><b>Lecturer</b>, Graduate School of International Studies, Ajou University</p><p class="sub">Taught the master's course in Energy Engineering to about 20 international students a semester: energy sources, conversion, thermodynamics, catalysis.</p></div></li>
+        <li><span class="when">2012 – 2014</span><div><p><b>M.E. researcher</b>, Kyung Hee University, Yongin</p><p class="sub">Seaweed pyrolysis and bio-oil upgrading; 2 first-author papers.</p></div></li>
+        <li><span class="when">Degrees</span><div><p>Ph.D. Energy Chemical Engineering, Ajou University, 2019 · M.E. Chemical Engineering, Kyung Hee University, 2014 · B.E. Chemical Engineering, Industrial University of Ho Chi Minh City, 2009</p></div></li>
+        <li><span class="when">Recognition</span><div><p>Korea National Top 100 R&amp;D Performances, Ministry of Science and ICT, 2023 · Chae Yung Bog Best Paper Award, KRICT, 2021 · Contribution Awards, ACVYS 2021 and 2022 · Excellent Research Award, ACVYS 2019 · First-place oral presentation, iSGA-5, 2016 · Best Vietnamese Student Award, Ajou University, 2015 · Brain Korea 21 Scholarship, 2012–2019</p></div></li>
+        <li><span class="when">Service</span><div><p>Editorial board, <i>Catalysts</i> (MDPI), since 2021, and guest editor of 3 special issues, including <a href="https://www.mdpi.com/journal/catalysts/special_issues/W8J000XHN2" rel="noopener">catalytic biomass conversion in Asia</a> · Nomination reviewer, VinFuture Prize, since 2021 · Reviewer for about 20 journals, including Chem. Eng. J., Int. J. Hydrogen Energy and Fuel · Session chair, ACVYS 2021 and 2022</p></div></li>
+        <li><span class="when">In the press</span><div><p>Ru-free Ni catalyst, <a href="http://www.e2news.com/news/articleView.html?idxno=241296" rel="noopener">Energy &amp; Environment News</a>, Apr 2022 · Ru on La–Ce composite, <a href="http://www.energy-news.co.kr/news/articleView.html?idxno=75108" rel="noopener">Energy News</a>, Jan 2021 (both in Korean)</p></div></li>
       </ul>
+      <p style="margin-top:16px"><a href="Thien_An_Le_CV.pdf" download>Download the 2-page CV (PDF)</a></p>
     </div>
   </section>
 
-  <section id="skills" class="sec" aria-labelledby="sk-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="sk-h">Skills</h2></div>
-      <div class="skills">
-        <div><h3>Catalysis &amp; process</h3><ul><li>Heterogeneous catalysis</li><li>Ammonia decomposition</li><li>Hydrogen carriers</li><li>CO₂ methanation &amp; utilization</li><li>Fixed-bed reactors</li><li>Pilot plant testing</li><li>Catalyst scale-up</li><li>Reaction kinetics</li><li>Technology transfer</li></ul></div>
-        <div><h3>Synthesis</h3><ul><li>Deposition–precipitation</li><li>Co-precipitation</li><li>Hydrothermal &amp; solvothermal</li><li>Sol-gel</li><li>Shaped catalysts</li><li>Metal nitrides</li></ul></div>
-        <div><h3>Characterization</h3><ul><li>Synchrotron XAS</li><li>XPS</li><li>XRD</li><li>TEM / HAADF-STEM</li><li>BET</li><li>Chemisorption</li><li>TPR / TPD / TPSR</li><li>In situ DRIFTS</li><li>Raman</li><li>GC</li><li>ICP-OES</li></ul></div>
-        <div><h3>Modeling &amp; communication</h3><ul><li>DFT (with collaborators)</li><li>Microkinetic modeling</li><li>Patent writing</li><li>Grant writing</li><li>Scientific writing</li><li>Peer review</li><li>Project management</li></ul></div>
-      </div>
+  <section id="skills" aria-labelledby="sk-h">
+    <h2 id="sk-h">Methods</h2>
+    <div class="skills prose">
+      <p><b>Process.</b> Fixed-bed and pilot reactors, kinetics and microkinetic modeling, catalyst scale-up and shaping, technology transfer.</p>
+      <p><b>Synthesis.</b> Deposition–precipitation, co-precipitation, hydrothermal and solvothermal routes, sol-gel, metal nitrides.</p>
+      <p><b>Characterization.</b> Synchrotron XAS, XPS, XRD, TEM and HAADF-STEM, BET, chemisorption, TPR/TPD/TPSR, in situ DRIFTS, Raman, GC, ICP-OES. DFT through collaborators.</p>
+      <p><b>Writing.</b> Patents, grant proposals, papers, peer review.</p>
     </div>
   </section>
 
-  <section id="honors" class="sec" aria-labelledby="hon-h">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="hon-h">Honors &amp; service</h2></div>
-      <div class="two">
-        <div>
-          <h3>Honors &amp; awards</h3>
-          <ul class="list">
-            <li><span class="date">2023</span><p>Korea National Top 100 R&amp;D Performances<small>Ministry of Science and ICT, Korea</small></p></li>
-            <li><span class="date">2021</span><p>Chae Yung Bog Best Paper Award<small>KRICT</small></p></li>
-            <li><span class="date">2021–22</span><p>Contribution Awards<small>Annual Conference of Vietnamese Young Scientists</small></p></li>
-            <li><span class="date">2019</span><p>Excellent Research Award<small>Annual Conference of Vietnamese Young Scientists</small></p></li>
-            <li><span class="date">2016</span><p>First Place Oral Presentation Award<small>iSGA-5, Busan</small></p></li>
-            <li><span class="date">2015</span><p>Best Vietnamese Student Award<small>Ajou University</small></p></li>
-            <li><span class="date">2012–19</span><p>Brain Korea 21 Scholarship<small>National Research Foundation of Korea</small></p></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Professional service</h3>
-          <ul class="list">
-            <li><span class="date">2021–</span><p>Editorial Board Member, <i>Catalysts</i> (MDPI)<small>Guest Editor of 3 special issues: transition-metal catalysis for sustainable chemistry; catalytic biomass conversion in Asia; catalytic production and upgrading of bio-oil</small></p></li>
-            <li><span class="date">2021–</span><p>Nomination Reviewer<small>VinFuture Prize</small></p></li>
-            <li><span class="date">2020–</span><p>Peer Reviewer, about 20 journals<small>incl. Chem. Eng. J., Int. J. Hydrogen Energy, Fuel, Energy, Sep. Purif. Technol., Catal. Lett., Sci. Rep., npj Mater. Sustain.</small></p></li>
-            <li><span class="date">2021–22</span><p>Session Chair &amp; Scientific Committee Member<small>Chemistry and Chemical Engineering, ACVYS 2021 and 2022</small></p></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <section id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Quick answers</h2>
+    <dl class="faq prose">
+      <dt>Do you need visa sponsorship?</dt>
+      <dd>No. I'm a U.S. permanent resident.</dd>
+      <dt>Would you relocate?</dt>
+      <dd>Yes. I live in Houston now.</dd>
+      <dt>Is it only ammonia?</dt>
+      <dd>No. Ten of my 21 papers are on CO and CO<sub>2</sub> methanation, and I've also worked on benzene hydrogenation and bio-oil upgrading. The common thread is supported-metal catalysts that have to survive real operating conditions.</dd>
+    </dl>
   </section>
 
-  <section id="contact" class="sec" aria-labelledby="con-h">
-    <div class="wrap contact">
-      <div>
-        <h2 id="con-h" style="font-size:var(--s3)">Let's talk</h2>
-        <p class="lead" style="margin-top:12px">Email is the fastest way to reach me. I reply within one business day and can start interviews right away.</p>
-        <div class="facts"><span class="chip key">Houston, TX · open to relocation</span></div>
-      </div>
-      <div class="links">
-        <div class="row"><span>email</span><p><span class="val" id="email-val" style="font-family:var(--f-body);color:var(--ink);font-size:var(--s0)">thienan.mr@gmail.com</span><button class="copy" id="copy-email" type="button">copy</button></p></div>
-        <div class="row"><span>cv</span><a href="Thien_An_Le_CV.pdf" download>Thien_An_Le_CV.pdf &middot; 2 pages</a></div>
-        <div class="row"><span>linkedin</span><a href="https://www.linkedin.com/in/thien-an-le-a8149769" target="_blank" rel="noopener">in/thien-an-le-a8149769</a></div>
-        <div class="row"><span>scholar</span><a href="https://scholar.google.com/citations?user=KQ3BfykAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a></div>
-        <div class="row"><span>pages</span><p><a href="https://sites.google.com/view/thienanle/resume" target="_blank" rel="noopener">Personal page</a> · <a href="https://sites.google.com/view/c-thienan-le" target="_blank" rel="noopener">Projects summary</a></p></div>
-      </div>
+  <section id="contact" class="contact" aria-labelledby="con-h">
+    <h2 id="con-h">Contact</h2>
+    <div>
+      <p>Email works best. I'm on Central Time and can interview now.</p>
+      <p class="mail"><a id="email" href="mailto:thienan.mr@gmail.com">thienan.mr@gmail.com</a><button class="copy" id="copy" type="button">Copy</button></p>
+      <p class="links"><a href="https://www.linkedin.com/in/thien-an-le-a8149769" rel="noopener">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=KQ3BfykAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a> · <a href="https://sites.google.com/view/thienanle/resume" rel="noopener">Personal page</a> · <a href="https://sites.google.com/view/c-thienan-le" rel="noopener">Project summaries</a></p>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap"><p>© 2026 Thien An (Michael) Le</p><p class="mono">2 NH₃ → N₂ + 3 H₂</p></div>
-</footer>
+<footer>© 2026 Thien An Le · updated October 2026</footer>
+</div>
 
 <script>
-(function(){
-  var b=document.getElementById('copy-email'), v=document.getElementById('email-val');
-  if(!b||!v) return;
-  b.addEventListener('click',function(){
-    var t=v.textContent.trim();
-    function sel(){var r=document.createRange();r.selectNodeContents(v);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='selected';}
-    try{navigator.clipboard.writeText(t).then(function(){b.textContent='copied';setTimeout(function(){b.textContent='copy'},1600)},sel);}catch(e){sel();}
-  });
-})();
+document.getElementById('copy').addEventListener('click', function () {
+  var btn = this, text = document.getElementById('email').textContent;
+  function done(label) { btn.textContent = label; setTimeout(function () { btn.textContent = 'Copy'; }, 2000); }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { done('Press Ctrl+C'); });
+  } else {
+    done('Press Ctrl+C');
+  }
+});
 </script>
-
 </body>
 </html>
