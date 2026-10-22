@@ -10,125 +10,158 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
 :root{
-  --paper:#fbfaf7;
-  --ink:#1c201f;
-  --soft:#5a605d;
-  --rule:#e2dfd8;
-  --teal:#0b5d55;
-  --rust:#8a4b0f;
+  --paper:#fffaf2;
+  --ink:#14201e;
+  --soft:#5b625f;
+  --rule:#eadfcd;
+  --night:#0c3a35;
+  --night-ink:#f6efe3;
+  --night-soft:#b9cfc8;
+  --amber:#f5a524;
+  --coral:#c2421d;
+  --teal:#0f7a6c;
+  --blue:#2f5fd0;
+  --green:#3f8a24;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
   --mono:"IBM Plex Mono",Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){
-  :root{--paper:#141716;--ink:#e8e6e1;--soft:#a5aaa6;--rule:#2c302e;--teal:#5cc0b3;--rust:#e0a45c;color-scheme:dark}
+  :root{--paper:#10171a;--ink:#ede7dc;--soft:#a9b0ac;--rule:#263033;--night:#0a2522;--coral:#f0825f;--teal:#4cc2b0;--blue:#86a4f0;--green:#8bc96b;color-scheme:dark}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans);overflow-x:clip}
 img{max-width:100%;display:block}
 a{color:var(--teal);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 h1,h2,h3{font-family:var(--serif);font-weight:650;line-height:1.2;margin:0}
 p{margin:0 0 1em}
 .page{max-width:1000px;margin:0 auto;padding:0 16px}
+.bleed{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%)}
 
-/* top bar */
-.bar{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+/* top bar + hero share the dark band */
+.bar{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:18px;padding-bottom:18px;background:var(--night);color:var(--night-ink);font-size:.95rem}
 .bar strong{font-family:var(--serif);font-size:1.05rem}
+.bar strong span{color:var(--amber)}
 .bar nav{display:flex;gap:18px;flex-wrap:wrap}
-.bar nav a{color:var(--soft);text-decoration:none}
-.bar nav a:hover{color:var(--ink)}
+.bar nav a{color:var(--night-soft);text-decoration:none}
+.bar nav a:hover{color:var(--amber)}
 @media (max-width:600px){.bar nav .wide{display:none}}
 
-/* intro */
-.intro{display:grid;grid-template-columns:170px minmax(0,1fr);gap:36px;padding:56px 0 40px}
-.intro img{width:170px;height:212px;object-fit:cover;border-radius:3px;filter:saturate(.9)}
-.intro h1{font-size:clamp(2.1rem,5vw,3rem)}
-.intro .aka{color:var(--soft);margin:.2em 0 1.2em}
-.intro .lede{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.45;max-width:34em}
-.intro .status{color:var(--soft);font-size:.95rem;max-width:40em}
+.hero{background:
+  radial-gradient(circle at 1px 1px,rgba(246,239,227,.09) 1px,transparent 0) 0 0/22px 22px,
+  var(--night);color:var(--night-ink);padding-bottom:40px}
+.hero a{color:var(--amber)}
+.intro{display:grid;grid-template-columns:170px minmax(0,1fr);gap:36px;padding:36px 0 36px}
+.intro img{width:170px;height:212px;object-fit:cover;border-radius:6px;box-shadow:10px 10px 0 var(--amber)}
+.intro h1{font-size:clamp(2.1rem,5vw,3.1rem)}
+.intro .aka{color:var(--night-soft);margin:.2em 0 1.1em}
+.intro .lede{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.5rem);line-height:1.45;max-width:34em}
+.intro .lede mark{background:none;color:var(--amber)}
+.intro .status{color:var(--night-soft);font-size:.95rem;max-width:40em}
 .intro .go{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:22px}
-.btn{display:inline-block;background:var(--teal);color:var(--paper);padding:10px 18px;border-radius:4px;text-decoration:none;font-weight:600}
-.btn:hover{filter:brightness(1.1)}
-@media (max-width:640px){.intro{grid-template-columns:1fr;gap:20px;padding:32px 0 28px}.intro img{width:120px;height:150px}}
+.btn{display:inline-block;background:var(--amber);color:#1d1503!important;padding:11px 20px;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+@media (max-width:640px){.intro{grid-template-columns:1fr;gap:22px;padding:26px 0}.intro img{width:120px;height:150px;box-shadow:7px 7px 0 var(--amber)}}
 
 /* result figure */
-.result{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:20px 0 22px;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:8px 36px;align-items:end}
-.result .num{font-family:var(--serif);font-size:clamp(2.6rem,7vw,3.6rem);line-height:1;color:var(--rust)}
-.result .unit{font-family:var(--mono);font-size:.85rem;color:var(--soft);margin-top:6px}
-.result p{margin:0;max-width:36em}
-.result .label{grid-column:1/-1;font-family:var(--mono);font-size:.8rem;color:var(--soft);margin-bottom:6px}
-@media (max-width:640px){.result{grid-template-columns:1fr}}
+.result{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr) minmax(0,300px);gap:12px 32px;align-items:center;background:rgba(246,239,227,.06);border:1px solid rgba(246,239,227,.14);border-radius:14px;padding:22px 24px}
+.result .label{grid-column:1/-1;font-family:var(--mono);font-size:.8rem;color:var(--night-soft);margin:0}
+.result .num{font-family:var(--serif);font-size:clamp(2.8rem,7vw,4rem);line-height:1;color:var(--amber)}
+.result .unit{font-family:var(--mono);font-size:.85rem;color:var(--night-soft);margin-top:6px}
+.result p{margin:0;max-width:34em;font-size:.97rem}
+.result svg{width:100%;height:auto}
+@media (max-width:860px){.result{grid-template-columns:minmax(0,auto) minmax(0,1fr)}.result svg{grid-column:1/-1;max-width:340px}}
+@media (max-width:560px){.result{grid-template-columns:1fr;padding:18px}}
 
-.numbers{display:flex;flex-wrap:wrap;gap:6px 28px;padding:16px 0 0;margin:0;list-style:none;font-size:.95rem;color:var(--soft)}
-.numbers b{color:var(--ink);font-weight:600}
+.numbers{display:flex;flex-wrap:wrap;gap:8px 30px;margin:0;padding-top:16px;padding-bottom:16px;list-style:none;font-size:.95rem;background:var(--amber);color:#2a1d02}
+.numbers b{font-family:var(--serif);font-size:1.15rem;font-weight:650}
 
-/* sections: heading sits in a left gutter on wide screens */
-section{display:grid;grid-template-columns:170px minmax(0,1fr);gap:36px;padding:44px 0;border-top:1px solid var(--rule);scroll-margin-top:12px}
-section > h2{font-size:1.35rem;padding-top:2px}
-@media (max-width:640px){section{grid-template-columns:1fr;gap:14px;padding:32px 0}}
+/* sections: coloured label in a left gutter */
+section{--c:var(--teal);display:grid;grid-template-columns:170px minmax(0,1fr);gap:36px;padding:48px 0;border-top:1px solid var(--rule);scroll-margin-top:12px}
+section:first-of-type{border-top:0}
+section > h2{font-size:1.4rem;padding-top:2px;color:var(--c)}
+section > h2::before{content:"";display:block;width:34px;height:5px;border-radius:3px;background:var(--c);margin-bottom:12px}
+#work{--c:#b7791f}#papers{--c:var(--coral)}#patents{--c:var(--blue)}#cv{--c:var(--green)}#skills{--c:#b7791f}#faq{--c:var(--coral)}
+@media (prefers-color-scheme: dark){#work,#skills{--c:var(--amber)}}
+@media (max-width:640px){section{grid-template-columns:1fr;gap:14px;padding:34px 0}}
 .prose{max-width:40em}
+.about-lead{font-family:var(--serif);font-size:1.25rem;line-height:1.5}
 
-.project{padding-bottom:22px;margin-bottom:22px;border-bottom:1px dashed var(--rule)}
-.project:last-child{border:0;margin:0;padding:0}
+.project{--p:var(--amber);position:relative;padding:20px 22px;margin-bottom:16px;border-radius:12px;background:color-mix(in srgb,var(--p) 9%,var(--paper));border-left:5px solid var(--p);transition:transform .15s}
+.project:hover{transform:translateX(4px)}
+.project:nth-of-type(2){--p:var(--coral)}
+.project:nth-of-type(3){--p:var(--teal)}
+.project:nth-of-type(4){--p:var(--green)}
 .project h3{font-size:1.15rem}
 .project .where{font-family:var(--mono);font-size:.8rem;color:var(--soft);margin:.25em 0 .7em}
 .project ul{margin:0;padding-left:1.1em}
 .project li{margin-bottom:.3em}
+.project li::marker{color:var(--p)}
+.project p:last-child,.project ul:last-child{margin-bottom:0}
 .project.minor h3{font-size:1rem}
 
 .pubs{list-style:none;margin:0;padding:0}
-.pubs li{padding:12px 0;border-bottom:1px solid var(--rule)}
-.pubs li:last-child{border:0}
+.pubs li{padding:12px 0 12px 14px;border-bottom:1px solid var(--rule);border-left:3px solid transparent;transition:border-color .15s}
+.pubs li:hover{border-left-color:var(--coral)}
+.pubs li:last-child{border-bottom:0}
 .pubs a{color:var(--ink);text-decoration:none;font-weight:600}
-.pubs a:hover{color:var(--teal);text-decoration:underline}
+.pubs a:hover{color:var(--coral);text-decoration:underline}
 .pubs .src{display:block;font-size:.9rem;color:var(--soft)}
-.pubs .me{color:var(--teal);font-weight:600}
-.pubs .yr{border:0;padding:18px 0 0;font-family:var(--serif);font-weight:650;color:var(--teal)}
+.pubs .me{color:var(--coral);font-weight:600}
+.pubs .yr{border:0;padding:20px 0 0;font-family:var(--serif);font-weight:650;font-size:1.1rem;color:var(--coral)}
+.pubs .yr:hover{border-left-color:transparent}
 details{margin-top:16px}
-summary{cursor:pointer;font-weight:600;color:var(--teal)}
+summary{cursor:pointer;font-weight:600;color:var(--coral);display:inline-block;padding:6px 14px;border:1.5px solid var(--coral);border-radius:999px}
+summary:hover{background:color-mix(in srgb,var(--coral) 10%,transparent)}
 details ul{margin-top:8px}
-.talks li{padding:6px 0;border:0}
+.talks li{padding:6px 0 6px 14px;border-bottom:0}
 .talks .src{display:inline}
 
-.patent{margin-bottom:18px}
-.patent:last-child{margin:0}
-.patent .id{font-family:var(--mono);font-size:.9rem}
-.patent .state{font-size:.85rem;color:var(--soft);margin-left:6px}
-.patent h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin:.2em 0}
+.patent{padding:16px 20px;margin-bottom:14px;border-radius:12px;border:1.5px solid color-mix(in srgb,var(--blue) 35%,var(--rule))}
+.patent:last-child{margin-bottom:0}
+.patent .id{font-family:var(--mono);font-size:.92rem;color:var(--blue);font-weight:600}
+.patent .state{font-size:.78rem;margin-left:8px;padding:2px 9px;border-radius:999px;background:color-mix(in srgb,var(--blue) 14%,transparent);color:var(--blue)}
+.patent .state.ok{background:color-mix(in srgb,var(--green) 16%,transparent);color:var(--green)}
+.patent h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin:.4em 0 .2em}
 .patent p{color:var(--soft);font-size:.95rem;margin:0}
 
 .cv{list-style:none;margin:0;padding:0}
-.cv li{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:16px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.cv li{display:grid;grid-template-columns:9.5em minmax(0,1fr);gap:16px;padding:11px 0;border-bottom:1px solid var(--rule)}
 .cv li:last-child{border:0}
-.cv .when{font-family:var(--mono);font-size:.82rem;color:var(--soft);padding-top:3px}
+.cv .when{font-family:var(--mono);font-size:.82rem;color:var(--green);padding-top:3px;font-weight:600}
 .cv p{margin:0}
 .cv .sub{color:var(--soft);font-size:.95rem}
 @media (max-width:520px){.cv li{grid-template-columns:1fr;gap:2px}}
 
-.skills p{margin-bottom:.7em}
-.skills b{font-weight:600}
+.skills p{margin-bottom:.8em}
+.skills b{font-weight:600;color:#9a6512}
+@media (prefers-color-scheme: dark){.skills b{color:var(--amber)}}
 
 dl.faq{margin:0}
-.faq dt{font-weight:600;margin-top:1em}
+.faq dt{font-weight:600;margin-top:1.1em}
+.faq dt::before{content:"Q ";font-family:var(--mono);color:var(--coral)}
 .faq dt:first-child{margin-top:0}
-.faq dd{margin:.2em 0 0}
+.faq dd{margin:.25em 0 0}
 
-.contact .mail{font-family:var(--serif);font-size:clamp(1.2rem,3vw,1.5rem)}
-.copy{font:inherit;font-size:.85rem;margin-left:10px;padding:3px 10px;border:1px solid var(--rule);border-radius:4px;background:transparent;color:var(--ink);cursor:pointer;vertical-align:3px}
-.contact .links{color:var(--soft)}
+#contact{--c:var(--amber);background:var(--night);color:var(--night-ink);border-top:0;margin-top:20px}
+#contact a{color:var(--amber)}
+#contact .links{color:var(--night-soft)}
+.contact .mail{font-family:var(--serif);font-size:clamp(1.25rem,3.2vw,1.7rem)}
+.copy{font:inherit;font-size:.85rem;margin-left:10px;padding:3px 12px;border:1px solid rgba(246,239,227,.35);border-radius:999px;background:transparent;color:var(--night-ink);cursor:pointer;vertical-align:4px}
+.copy:hover{border-color:var(--amber);color:var(--amber)}
 
-footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);font-size:.9rem}
+footer{padding-top:18px;padding-bottom:36px;background:var(--night);color:var(--night-soft);font-size:.9rem;border-top:1px solid rgba(246,239,227,.12)}
 </style>
 </head>
 <body>
 <div class="page">
 
-<header class="bar">
-  <strong>Thien An Le</strong>
+<header class="bar bleed">
+  <strong>Thien An <span>Le</span></strong>
   <nav aria-label="Sections">
     <a href="#about">About</a>
     <a href="#work">Work</a>
@@ -140,12 +173,13 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
 </header>
 
 <main>
+  <div class="hero bleed">
   <div class="intro">
     <img src="photo.jpg" width="600" height="750" alt="Thien An Le, smiling, in glasses and a dark blazer" fetchpriority="high">
     <div>
       <h1>Thien An Le, Ph.D.</h1>
       <p class="aka">Catalysis scientist. I also go by Michael.</p>
-      <p class="lede">I make catalysts that get hydrogen out of ammonia and turn CO<sub>2</sub> into methane. Two of them left the lab under license: one to Lotte Chemical, one to CES Co., Ltd.</p>
+      <p class="lede">I make catalysts that get hydrogen out of ammonia and turn CO<sub>2</sub> into methane. <mark>Two of them left the lab under license:</mark> one to Lotte Chemical, one to CES Co., Ltd.</p>
       <p class="status">Houston, Texas. U.S. permanent resident, so no sponsorship is needed, and I'm open to relocating. Looking for R&amp;D roles in catalysis, hydrogen or energy, in industry, a national lab or a university.</p>
       <div class="go">
         <a class="btn" href="mailto:thienan.mr@gmail.com">Email me</a>
@@ -163,9 +197,21 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
       <div class="unit">mmol H<sub>2</sub> min⁻¹ g<sub>Ru</sub>⁻¹ at 450 °C</div>
     </div>
     <p>Cs-promoted Ru on nitrogen-doped CeO<sub>2</sub>, held for 100 h on stream. The nitrogen shifts the electronic state of Ru so surface N atoms pair up and leave as N<sub>2</sub> more easily, which is the slow step on Ru. DFT from our collaborators agrees. <a href="https://doi.org/10.1039/D5TA10316A" rel="noopener">The paper</a></p>
+    <svg viewBox="0 0 300 130" role="img" aria-label="Two ammonia molecules split into one nitrogen molecule and three hydrogen molecules">
+      <g fill="#5b84f2"><circle cx="34" cy="44" r="13"/><circle cx="34" cy="100" r="13"/></g>
+      <g fill="#f6efe3"><circle cx="17" cy="30" r="7"/><circle cx="51" cy="30" r="7"/><circle cx="34" cy="62" r="7"/><circle cx="17" cy="86" r="7"/><circle cx="51" cy="86" r="7"/><circle cx="34" cy="118" r="7"/></g>
+      <path d="M78 72h86" stroke="#f5a524" stroke-width="3" stroke-linecap="round"/>
+      <path d="M156 64l10 8-10 8" fill="none" stroke="#f5a524" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="121" y="60" text-anchor="middle" fill="#f5a524" font-family="IBM Plex Mono,monospace" font-size="11">Cs–Ru</text>
+      <text x="121" y="92" text-anchor="middle" fill="#b9cfc8" font-family="IBM Plex Mono,monospace" font-size="10">450 °C</text>
+      <g fill="#5b84f2"><circle cx="214" cy="34" r="13"/><circle cx="236" cy="34" r="13"/></g>
+      <g fill="#f6efe3"><circle cx="190" cy="92" r="7"/><circle cx="202" cy="92" r="7"/><circle cx="226" cy="92" r="7"/><circle cx="238" cy="92" r="7"/><circle cx="262" cy="92" r="7"/><circle cx="274" cy="92" r="7"/></g>
+      <g fill="#b9cfc8" font-family="IBM Plex Mono,monospace" font-size="10" text-anchor="middle"><text x="225" y="62">N₂</text><text x="232" y="120">3 H₂</text></g>
+    </svg>
+  </div>
   </div>
 
-  <ul class="numbers">
+  <ul class="numbers bleed">
     <li><b>21</b> peer-reviewed papers, 17 first or co-first author</li>
     <li><b>1,600+</b> citations, h-index 17 (Google Scholar, Oct 2026)</li>
     <li><b>1</b> U.S. patent granted, 2 U.S. applications pending, 7 grants in Korea, Japan and China</li>
@@ -177,7 +223,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
   <section id="about" aria-labelledby="about-h">
     <h2 id="about-h">About</h2>
     <div class="prose">
-      <p>Ammonia is an easy way to ship hydrogen. Getting the hydrogen back out, at a temperature and a catalyst cost a plant will accept, is the hard part. That's what I worked on at KRICT (Korea Research Institute of Chemical Technology) from 2019 to 2026.</p>
+      <p class="about-lead">Ammonia is an easy way to ship hydrogen. Getting the hydrogen back out, at a temperature and a catalyst cost a plant will accept, is the hard part. That's what I worked on at KRICT (Korea Research Institute of Chemical Technology) from 2019 to 2026.</p>
       <p>On ruthenium, the bottleneck is two nitrogen atoms finding each other and leaving the surface. Most of my work is about speeding that up: which ceria facet the Ru sits on, putting nitrogen or lanthanum into the support, adding cesium. Every catalyst gets the same treatment, characterization (TPR, TPD, XPS, STEM, synchrotron XAS, in situ DRIFTS) read against kinetics, so I can say why it works and not only that it does.</p>
       <p>A powder that looks great in a lab reactor can still fail in a plant. So the later work moved to 3&nbsp;mm beads, less Ru, runs of 100 to 150 hours, and pilot fixed-bed tests. The solvothermal Ru/CeO<sub>2</sub> catalyst made it the whole way and was licensed to Lotte Chemical.</p>
       <p>Before KRICT I did my Ph.D. at Ajou University with Prof. Eun Duck Park, on nickel and cobalt catalysts for CO and CO<sub>2</sub> methanation. That work produced 10 first-author papers and a granted patent, and it was licensed to CES Co., Ltd. Before that came an M.E. at Kyung Hee University (bio-oil from seaweed) and a B.E. at the Industrial University of Ho Chi Minh City. I work in English and Vietnamese.</p>
@@ -222,7 +268,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
   <section id="papers" aria-labelledby="papers-h">
     <h2 id="papers-h">Papers</h2>
     <div>
-      <p class="prose">Five I'd read first. My name is in <span class="me">teal</span>; all five are first or co-first author.</p>
+      <p class="prose">Five I'd read first. My name is <span class="me">highlighted</span>; all five are first or co-first author.</p>
       <ul class="pubs">
         <li><a href="https://doi.org/10.1039/D5TA10316A" rel="noopener">Synergistic electronic modulation of Ru sites via N-doped CeO<sub>2</sub> and Cs promotion for high efficiency H<sub>2</sub> generation from ammonia decomposition</a><span class="src"><span class="me">T. A. Le</span>, Y. M. Kim, S. J. Han, Y. H. Im, M. S. Kim, Y. J. Lee, H. J. Chae · J. Mater. Chem. A 14, 14103–14114 (2026)</span></li>
         <li><a href="https://doi.org/10.1016/j.cej.2024.152503" rel="noopener">Ru dispersed on CeO<sub>2</sub>{1 0 0} facets boosting the catalytic NH<sub>3</sub> decomposition for green H<sub>2</sub> generation</a><span class="src"><span class="me">T. A. Le</span>, Y. M. Kim, S. J. Han, Q. C. Do, G. J. Kim, Y. H. Im, H. J. Chae · Chem. Eng. J. 493, 152503 (2024)</span></li>
@@ -298,7 +344,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
     <div>
       <p class="prose">Three patent families, all filed by KRICT with me as co-inventor. One is granted in the U.S.; the other two are pending there and already granted in Asia.</p>
       <article class="patent">
-        <a class="id" href="https://patents.google.com/patent/US12251684B2" rel="noopener">US 12,251,684 B2</a><span class="state">granted Mar 2025</span>
+        <a class="id" href="https://patents.google.com/patent/US12251684B2" rel="noopener">US 12,251,684 B2</a><span class="state ok">granted Mar 2025</span>
         <h3>Catalyst for decomposition of ammonia, manufacturing method therefor, and method for producing hydrogen using same</h3>
         <p>The solvothermal, alcohol-assisted Ru catalyst. Also granted as KR 10-2544718 and JP 7546784; applications filed in China and Europe.</p>
       </article>
@@ -354,7 +400,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
     </dl>
   </section>
 
-  <section id="contact" class="contact" aria-labelledby="con-h">
+  <section id="contact" class="contact bleed"aria-labelledby="con-h">
     <h2 id="con-h">Contact</h2>
     <div>
       <p>Email works best. I'm on Central Time and can interview now.</p>
@@ -364,7 +410,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--soft);fo
   </section>
 </main>
 
-<footer>© 2026 Thien An Le · updated October 2026</footer>
+<footer class="bleed">© 2026 Thien An Le · updated October 2026</footer>
 </div>
 
 <script>
